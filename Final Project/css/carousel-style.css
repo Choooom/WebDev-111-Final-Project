@@ -1,0 +1,389 @@
+body{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: black;
+  display: grid;
+  grid-template-columns: repeat(12, 8.33%);
+  grid-template-rows: repeat(12, 8.33%);
+  overflow-x: hidden;
+  height: 100%;
+  width: 100vw;
+}
+
+.carousel{
+  grid-area: 4 / 2 / 7 / 7;
+  background-color: black;
+  overflow-y: hidden;
+}
+
+.slides{
+  height: 100%;
+  width: 100%;
+}
+
+.slide-1,
+.slide-2,
+.slide-3{
+  height: 100%;
+  width: 100%;
+}
+
+.slides img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.slides img:hover{
+  opacity: 0.6;
+}
+
+.slide-1 {
+  animation: slide-1 20s ease-in-out infinite;
+}
+
+.slide-2 {
+  animation: slide-2 20s ease-in-out infinite;
+}
+
+.slide-3 {
+  animation: slide-3 20s ease-in-out infinite;
+}
+
+@keyframes slide-1 {
+  0% {
+    transform: translateY(0%);
+  }
+
+  30.33%{
+    transform: translateY(0%);
+  }
+  33.33% {
+    transform: translateY(-100%);
+  }
+  66.66% {
+    transform: translateY(-100%);
+  }
+  97.66%{
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(0%);
+  }
+}
+
+@keyframes slide-2 {
+  0% {
+    transform: translateY(0%);
+  }
+  30.33%{
+    transform: translateY(0%);
+  }
+  33.33% {
+    transform: translateY(-100%);
+  }
+  63.33%{
+    transform: translateY(-100%);
+  }
+  66.66% {
+    transform: translateY(-200%);
+  }
+  97.66%{
+    transform: translateY(-200%);
+  }
+  100% {
+    transform: translateY(0%);
+  }
+}
+
+@keyframes slide-3 {
+  0% {
+    transform: translateY(0%);
+  }
+  30.33%{
+    transform: translateY(0%);
+  }
+  33.33% {
+    transform: translateY(-100%);
+  }
+  63.33%{
+    transform: translateY(-100%);
+  }
+  66.66% {
+    transform: translateY(-200%);
+  }
+  97.66%{
+    transform: translateY(-200%);
+  }
+  100% {
+    transform: translateY(0%);
+  }
+}
+
+.description{
+  grid-area: 4 / 8 / 7 / 12;
+  height: 90%;
+  width: 100%;
+  align-self: center;
+  position: relative;
+}
+
+.description .hogwarts-legacy,
+.description .pc-simulator,
+.description .tekken{
+  height: 100%;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(12, 8.33%);
+  grid-template-rows: repeat(12, 8.33%);
+  position: absolute;
+}
+
+.hogwarts-legacy{
+  animation: hogwarts-legacy 20s ease-in-out infinite;
+}
+
+.pc-simulator{
+  animation: pc-simulator 20s ease-in-out infinite;
+}
+
+.tekken{
+  animation: tekken 20s ease-in-out infinite;
+}
+
+.hogwarts-legacy .header,
+.pc-simulator .header,
+.tekken .header{
+  grid-area: 1 / 1 / 4 / 7;
+  height: 100%;
+  width: 100%;
+  color: white;
+}
+
+.hogwarts-legacy .header h1,
+.pc-simulator .header h1,
+.tekken .header h1{
+  font-size: 2rem;
+}
+
+.hogwarts-legacy .bio,
+.pc-simulator .bio,
+.tekken .bio{
+  grid-area: 4 / 1 / 7 / 13;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.hogwarts-legacy .bio p,
+.pc-simulator .bio p,
+.tekken .bio p{
+  text-align: center;
+  font-size: 0.9rem;
+  color: white;
+}
+
+.hogwarts-legacy .sub-header,
+.pc-simulator .sub-header,
+.tekken .sub-header{
+  grid-area: 7 / 1 / 9 / 5;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.hogwarts-legacy .sub-header h3,
+.pc-simulator .sub-header h3,
+.tekken .sub-header h3{
+  color: white;
+  font-size: 1.5rem;
+  font-weight: normal;
+}
+
+.hogwarts-legacy .buttons,
+.pc-simulator .buttons,
+.tekken .buttons{
+  grid-area: 9 / 2 / 11 / 12;
+  height: 100%;
+  width: 90%;
+  display: flex;
+}
+
+.hogwarts-legacy .buttons .fa-plus-circle,
+.pc-simulator .buttons .fa-plus-circle,
+.tekken .buttons .fa-plus-circle{
+  margin-right: 10px;
+}
+
+.hogwarts-legacy .buttons a button,
+.pc-simulator .buttons a button,
+.tekken .buttons a button{
+  background-color: black;
+  color: white;
+  font-size: 1rem;
+  font-weight: bold;
+  border-style: none;
+  border-radius: 5px;
+  height: 70%;
+  width: 130%;
+  transition: all 0.3s ease;
+}
+
+.hogwarts-legacy .buttons a:nth-child(1),
+.pc-simulator .buttons a:nth-child(1),
+.tekken .buttons a:nth-child(1){
+  padding-left: 50px;
+}
+
+.hogwarts-legacy .buttons a:nth-child(2),
+.pc-simulator .buttons a:nth-child(2),
+.tekken .buttons a:nth-child(2){
+  padding-left: 150px;
+}
+
+.hogwarts-legacy .buttons button:hover,
+.pc-simulator .buttons button:hover,
+.tekken .buttons button:hover{
+  background-color: white;
+  color: black;
+  cursor: pointer;
+}
+
+.hogwarts-legacy .ratings,
+.pc-simulator .ratings,
+.tekken .ratings{
+  grid-area: 11 / 1 / 13 / 13;
+  display: flex;
+}
+
+.hogwarts-legacy .ratings .stars,
+.pc-simulator .ratings .stars,
+.tekken .stars{
+  height: 100%;
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+}
+
+.hogwarts-legacy .ratings .stars img,
+.pc-simulator .ratings .stars img,
+.tekken .ratings .stars img{
+  height: 40%;
+  width: 40%;
+  object-fit: cover;
+}
+
+.hogwarts-legacy .ratings .survey,
+.pc-simulator .ratings .survey,
+.tekken .ratings .survey{
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  padding-left: 20px;
+  height: 100%;
+  width: 60%;
+}
+
+.hogwarts-legacy .ratings .survey p,
+.pc-simulator .ratings .survey p,
+.tekken .ratings .survey p{
+  color: white;
+  font-size: 1rem;
+}
+
+
+@keyframes hogwarts-legacy {
+  0% {
+    opacity: 1;
+    z-index: 1;
+  }
+
+  30.33%{
+    opacity: 1;
+    z-index: 1;
+  }
+  33.33% {
+    opacity: 0;
+    z-index: 0;
+  }
+  66.66% {
+    opacity: 0;
+    z-index: 0;
+  }
+  97.66%{
+    opacity: 0;
+    z-index: 0;
+  }
+  100% {
+    opacity: 1;
+    z-index: 1;
+  }
+}
+
+@keyframes pc-simulator {
+  0% {
+    opacity: 0;
+    z-index: 0;
+  }
+  30.33%{
+    opacity: 0;
+    z-index: 0;
+  }
+  33.33% {
+    opacity: 1;
+    z-index: 1;
+  }
+  63.33%{
+    opacity: 1;
+    z-index: 1;
+  }
+  66.66% {
+    opacity: 0;
+    z-index: 0;
+  }
+  97.66%{
+    opacity: 0;
+    z-index: 0;
+  }
+  100% {
+    opacity: 0;
+    z-index: 0;
+  }
+}
+
+@keyframes tekken {
+  0% {
+    opacity: 0;
+    z-index: 0;
+  }
+  30.33%{
+    opacity: 0;
+    z-index: 0;
+  }
+  33.33% {
+    opacity: 0;
+    z-index: 0;
+  }
+  63.33%{
+    opacity: 0;
+    z-index: 0;
+  }
+  66.66% {
+    opacity: 1;
+    z-index: 1;
+  }
+  97.66%{
+    opacity: 1;
+    z-index: 1;
+  }
+  100% {
+    opacity: 0;
+    z-index: 0;
+  }
+}

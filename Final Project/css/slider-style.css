@@ -1,0 +1,87 @@
+.recommendation{
+    grid-area: 8 / 1 / 11 / 13;
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(12, 8.33%);
+    grid-template-rows: repeat(12, 8.33%);
+}
+
+.recommendation .header{
+    grid-area: 1 / 2 / 6 / 6;
+    justify-self: start;
+}
+
+.recommendation .header h2{
+    font-size: 1.7rem;
+    color: white;
+}
+
+.recommendation .header h3{
+    font-size: 1.1rem;
+    font-weight: normal;
+    color: rgb(184, 184, 184);
+}
+
+.recommendation .slider{
+    grid-area: 5 / 1 / 11 / 13;
+    background: linear-gradient(to right, black, rgb(49, 47, 47));
+    height: 90%;
+    width: 90%;
+    align-self: center;
+    justify-self: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.recommendation .area{
+    height: 90%;
+    width: 90%;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.slider img{
+    height: 100%;
+    width: calc(93% / 4);
+    object-fit: cover;
+    margin-left: 14px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.slider i{
+    background-color: white;
+    width: 36px;
+    height: 36px;
+    cursor: pointer;
+    text-align: center;
+    line-height: 36px;
+    border-radius: 50%;
+    font-size: 1.2rem; 
+    transition: transform 0.1s linear;
+}
+
+.slider i:active{
+    transform: scale(0.9);
+}
+
+.slider i:hover{
+    background: #f2f2f2;
+}
+
+.slider i:first-child{
+    position: relative;
+    left: -10px;
+}
+
+.slider i:last-child{
+    position: relative;
+    right: -10px;
+}
+
+.slider img:hover{
+    transform: scale(0.9);
+    opacity: 0.5;
+}
